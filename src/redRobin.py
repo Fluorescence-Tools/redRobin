@@ -427,6 +427,8 @@ class sampleSet():
                 self.mergedstats = pd.concat([self.mergedstats, getattr(self, attr)], axis = 1)
         addCorrProxFret(self.mergedstats, self.kprox)
         addESpecies(self.mergedstats, tauxD0)
+        outname = os.path.join(self.resdir, self.experimentId + 'AllData.csv')
+        dfrm.to_csv(outname)
 
     def batchFit1ltD0DA(self,
                       D0dat = None,
