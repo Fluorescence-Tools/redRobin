@@ -566,6 +566,16 @@ class sampleSet():
         dfrm.to_csv(outname)
         self.fit2ltdfrm = dfrm
         return dfrm
+        
+        
+        
+    def wrap_OO_fitDA():
+        raise NotImplementedError
+        #copy & adapt from LSM analysis
+        
+    def wrap_OO_fitD0():
+        raise NotImplementedError
+        #copy & adapt from LSM analysis
 
     def getImChannelProperty(self, property, channelId):
         List = [getattr(sample.imChannelLst[channelId], property) \
